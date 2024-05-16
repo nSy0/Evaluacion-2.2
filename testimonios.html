@@ -18,7 +18,7 @@
 <body>
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="index.html">Navbar</a>
+    <a class="navbar-brand" href="index.html">Menu</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -43,5 +43,35 @@
     </div>
 </nav>
 
+<h1>Testimonios</h1>
+<div id="test"></div>
+
+<!--no se que mas hacer para poder lograr que se vean los comentarios-->
+
+<script>
+  const settings = {
+	async: true,
+	crossDomain: true,
+	url: 'https://restaurants222.p.rapidapi.com/reviews',
+	method: 'POST',
+	headers: {
+		'content-type': 'application/x-www-form-urlencoded',
+		'X-RapidAPI-Key': '029dc21c1dmshd3f99a7804f8160p112f64jsna56f873f3d3f',
+		'X-RapidAPI-Host': 'restaurants222.p.rapidapi.com'
+	},
+	data: {
+		location_id: '15333482',
+		language: 'en_US',
+		currency: 'USD',
+		offset: '0'
+	}
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+  console.log(response.data.id.text);
+            $("#test").append("<h2>"+response.data.id.text+"</h2>")
+});
+</script>
 </body>
 </html>
