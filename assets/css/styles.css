@@ -7,4 +7,16 @@ body {
 .section {
     padding: 50px 20px;
   }
+  .login-form, .restaurants-section, .comidas-especiales{
+    padding: 200px 0 200px;
+  }
+
+  .restaurants-section img{
+
+    width: 400px;
+  }
   
+  .comidas-especiales  img {
+    width: 380px;
+    height: 400px;
+  }
