@@ -12,7 +12,7 @@ $(Document).ready(function(){
             $("#errorPassword").fadeIn();
             return false;
         }else{
-            $("#errorPassword").fadeOut();
+            $("#errorMail").fadeOut();
             if(correo == "" || expr.test(correo)){
                 $("#errorMail").fadeIn();
                 return false;
