@@ -20,3 +20,8 @@ body {
     width: 380px;
     height: 400px;
   }
+
+  #errorPassword,#errorMail{
+    color:red;
+    opacity: 0;
+  }
